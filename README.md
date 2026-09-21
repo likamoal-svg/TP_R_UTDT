@@ -32,7 +32,7 @@ El coeficiente de cobertura es negativo y significativo cuando se usa la variaci
 ├── README.md
 ├── data/
 │   └── men_estadisticas_educacion.csv   # datos descargados de Datos Abiertos
-├── scripts/
+├── Scripts/
 │   ├── 01_carga_limpieza.R              # carga, limpieza y muestra de estimación
 │   ├── 02_eda.R                         # análisis exploratorio (figuras y tablas)
 │   └── 03_modelos.R                     # modelos de panel, robustez y diagnósticos
@@ -64,9 +64,9 @@ install.packages(c(
 3. Ejecutar los scripts en orden, cada uno en una sesión limpia:
 
 ```r
-source("scripts/01_carga_limpieza.R")
-source("scripts/02_eda.R")
-source("scripts/03_modelos.R")
+source("Scripts/01_carga_limpieza.R")
+source("Scripts/02_eda.R")
+source("Scripts/03_modelos.R")
 ```
 
 Las semillas están fijadas (`set.seed(2026)`). El script 01 usa `data/men_estadisticas_educacion.csv` si existe, y lo descarga de la fuente si no. Además de las tablas y figuras, el script 01 genera archivos `.rds` intermedios en `data/`, que no se incluyen en el repositorio.
